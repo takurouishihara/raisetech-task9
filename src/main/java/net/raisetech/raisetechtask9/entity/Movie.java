@@ -1,4 +1,4 @@
-package net.raisetech.raisetechtask9;
+package net.raisetech.raisetechtask9.entity;
 
 public class Movie {
 
