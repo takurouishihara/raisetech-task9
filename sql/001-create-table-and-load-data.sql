@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS movies;
 
 CREATE TABLE movies (
    id int unsigned AUTO_INCREMENT,
-   name VARCHAR(20) NOT NULL,
+   name VARCHAR(100) NOT NULL,
    age int unsigned NOT NULL,
    PRIMARY KEY(id)
   );
