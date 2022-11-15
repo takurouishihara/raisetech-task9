@@ -4,13 +4,13 @@ import lombok.Getter;
 import net.raisetech.raisetechtask9.entity.Movie;
 
 @Getter
-public class MovieResponse {
-    private int id;
+public class AgeResponse {
+
     private String name;
     private Integer age;
 
-    public MovieResponse(Movie movie) {
-        this.id = movie.getId();
+    public AgeResponse(Movie movie) {
+
         this.name = movie.getName();
         this.age = movie.getAge();
     }

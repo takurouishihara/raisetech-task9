@@ -1,12 +1,10 @@
 package net.raisetech.raisetechtask9.mapper;
 
-
 import net.raisetech.raisetechtask9.entity.Movie;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import java.util.List;
 import java.util.Optional;
-
 
 @Mapper
 public interface MovieMapper {
@@ -18,6 +16,5 @@ public interface MovieMapper {
 
     @Select("SELECT * FROM movies WHERE age = #{age}")
     Optional<Movie> findByAge(Integer age);
-
 
 }

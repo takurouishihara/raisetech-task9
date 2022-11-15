@@ -1,6 +1,8 @@
 package net.raisetech.raisetechtask9.entity;
 
+import lombok.Getter;
 
+@Getter
 public class Movie {
 
     private int id;
@@ -15,10 +17,6 @@ public class Movie {
 
     public int getId() {
         return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public Integer getAge() {

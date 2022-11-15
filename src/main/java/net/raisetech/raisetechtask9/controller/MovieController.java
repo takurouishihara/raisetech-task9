@@ -10,16 +10,17 @@ import java.util.List;
 public class MovieController {
 
     private final MovieService movieService;
+
     public MovieController(MovieService movieService) {
         this.movieService = movieService;
     }
+
     @GetMapping("/movies")
-    public List<MovieResponse> getMovies(){
+    public List<MovieResponse> getMovies() {
         return movieService.findAll().stream().map(MovieResponse::new).toList();
     }
-
-    @GetMapping("/movies/{age}")
-    public List<MovieResponse> getAge(@RequestParam("age") Integer age) {
-        return movieService.findByAge(age).stream().map(MovieResponse::new).toList();
-    }
+        @GetMapping("/movies/{age}")
+        public List<AgeResponse> getAge (@RequestParam("age") Integer age){
+            return movieService.findByAge(age).stream().map(AgeResponse::new).toList();
+        }
     }
