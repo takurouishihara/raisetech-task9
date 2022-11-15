@@ -1,12 +1,13 @@
 package net.raisetech.raisetechtask9.entity;
 
+
 public class Movie {
 
     private int id;
     private  String name;
-    private int age;
+    private Integer age;
 
-    public Movie(int id, String name, int age) {
+    public Movie(int id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -20,7 +21,7 @@ public class Movie {
         return name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 }
