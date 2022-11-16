@@ -7,11 +7,11 @@ import net.raisetech.raisetechtask9.entity.Movie;
 public class MovieResponse {
     private int id;
     private String name;
-    private Integer age;
+    private Integer published_Year;
 
     public MovieResponse(Movie movie) {
         this.id = movie.getId();
         this.name = movie.getName();
-        this.age = movie.getAge();
+        this.published_Year = movie.getPublished_Year();
     }
 }

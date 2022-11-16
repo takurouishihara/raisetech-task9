@@ -14,7 +14,8 @@ public interface MovieMapper {
     @Select("SELECT * FROM movies WHERE id = #{id}")
     Optional<Movie> findById(int id);
 
-    @Select("SELECT * FROM movies WHERE age = #{age}")
-    Optional<Movie> findByAge(Integer age);
+    @Select("SELECT * FROM movies WHERE published_Year = #{published_Year}")
+    Optional<Movie> findByPublished_Year(Integer published_Year);
 
+    boolean isPresent();
 }
