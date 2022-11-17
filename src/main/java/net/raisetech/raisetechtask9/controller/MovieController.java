@@ -19,8 +19,8 @@ public class MovieController {
     public List<MovieResponse> getMovies() {
         return movieService.findAll().stream().map(MovieResponse::new).toList();
     }
-    @GetMapping("/{published_Year}")
-    public List<MovieResponse> getPublished_Year (@RequestParam("published_Year") Integer published_Year){
-        return movieService.findByPublished_Year(published_Year).stream().map(MovieResponse::new).toList();
+    @GetMapping("/{published_year}")
+    public List<MovieResponse> getPublished_year(@RequestParam("published_year") Integer published_year){
+        return movieService.findByPublished_year(published_year).stream().map(MovieResponse::new).toList();
       }
     }
