@@ -2,9 +2,9 @@ package net.raisetech.raisetechtask9.service;
 
 import net.raisetech.raisetechtask9.ResourceNotFoundException;
 import net.raisetech.raisetechtask9.entity.Movie;
+import net.raisetech.raisetechtask9.form.CreateForm;
 import net.raisetech.raisetechtask9.mapper.MovieMapper;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -28,5 +28,10 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public Optional<Movie> findByPublished_year(Integer published_year) {
         return Optional.ofNullable(movieMapper.findByPublished_year(published_year).orElseThrow(() -> new ResourceNotFoundException("resource not found")));
+    }
+
+    @Override
+    public void createByMovie(CreateForm form)  {
+        movieMapper.createMovie(form);
     }
 }

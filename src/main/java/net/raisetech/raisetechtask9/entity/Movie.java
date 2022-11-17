@@ -19,6 +19,10 @@ public class Movie {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Integer getPublished_year() {
         return published_year;
     }
