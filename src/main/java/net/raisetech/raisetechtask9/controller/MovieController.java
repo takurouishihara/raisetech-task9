@@ -22,5 +22,6 @@ public class MovieController {
         } else {
             return movieService.findByPublished_year(publishedYear).stream().map(MovieResponse::new).toList();
         }
+
     }
 }

@@ -27,6 +27,7 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public Optional<Movie> findByPublished_year(Optional<Integer> publishedYear) {
         return Optional.ofNullable(movieMapper.findByPublished_year(publishedYear).orElseThrow(() -> new ResourceNotFoundException("resource not found")));
+
     }
 
 }
