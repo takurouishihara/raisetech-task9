@@ -1,6 +1,8 @@
 package net.raisetech.raisetechtask9.controller;
 
+import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.service.MovieService;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
@@ -14,12 +16,11 @@ public class MovieController {
     }
 
     @GetMapping("/movies")
-    public List<MovieResponse> getMovies(@RequestParam(name = "published_year", required = false) Optional<Integer> published_year) {
-        if (published_year.isEmpty()) {
+    public List<MovieResponse> getMovies(@RequestParam(name = "published_year") Optional<Integer> publishedYear) {
+        if (publishedYear.isEmpty()) {
             return movieService.findAll().stream().map(MovieResponse::new).toList();
         } else {
-            return movieService.findByPublished_year(published_year).stream().map(MovieResponse::new).toList();
+            return movieService.findByPublished_year(publishedYear).stream().map(MovieResponse::new).toList();
         }
-
     }
 }
