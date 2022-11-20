@@ -1,6 +1,5 @@
 package net.raisetech.raisetechtask9.service;
 
-import net.raisetech.raisetechtask9.ResourceNotFoundException;
 import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.mapper.MovieMapper;
 import org.springframework.stereotype.Service;
@@ -25,9 +24,7 @@ public class MovieServiceImpl implements MovieService {
         return movieMapper.findById(id);
     }
     @Override
-    public Optional<Movie> findByPublished_year(Optional<Integer> publishedYear) {
-        return Optional.ofNullable(movieMapper.findByPublished_year(publishedYear).orElseThrow(() -> new ResourceNotFoundException("resource not found")));
-
+    public List<Movie> findByPublished_year(Integer publishedYear) {
+        return movieMapper.findByPublished_year(publishedYear);
     }
-
 }

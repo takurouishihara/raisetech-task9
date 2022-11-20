@@ -23,5 +23,4 @@ public class ExceptionControllerAdvice {
                 "path", request.getRequestURI());
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
-
 }
