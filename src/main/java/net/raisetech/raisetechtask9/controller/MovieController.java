@@ -15,8 +15,8 @@ public class MovieController {
         this.movieService = movieService;
     }
     @GetMapping("/movies/{id}")
-    public Optional<Movie> getMovieId(@PathVariable("id") int id) {
-        return Optional.ofNullable(movieService.findById(id).orElseThrow(() -> new ResourceNotFoundException("resource not found")));
+    public Optional<Movie> getById(@PathVariable("id") int id) {
+        return movieService.findById(id);
     }
     @GetMapping("/movies")
     public List<MovieResponse> getMovies(@RequestParam(name = "published_year") Optional<Integer> publishedYear) {

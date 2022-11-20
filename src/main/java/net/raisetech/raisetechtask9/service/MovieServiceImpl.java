@@ -22,7 +22,7 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public Optional<Movie> findById(int id) {
-        return movieMapper.findById(id);
+        return Optional.ofNullable(movieMapper.findById(id).orElseThrow(() -> new ResourceNotFoundException("resource not found")));
     }
     @Override
     public List<Movie> findByPublishedYear(Integer publishedYear) {
