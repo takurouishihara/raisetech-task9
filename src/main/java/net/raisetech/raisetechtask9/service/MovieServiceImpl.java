@@ -1,5 +1,6 @@
 package net.raisetech.raisetechtask9.service;
 
+import net.raisetech.raisetechtask9.ResourceNotFoundException;
 import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.mapper.MovieMapper;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class MovieServiceImpl implements MovieService {
         return movieMapper.findById(id);
     }
     @Override
-    public List<Movie> findByPublished_year(Integer publishedYear) {
-        return movieMapper.findByPublished_year(publishedYear);
+    public List<Movie> findByPublishedYear(Integer publishedYear) {
+        return movieMapper.findByPublishedYear(publishedYear);
     }
 }

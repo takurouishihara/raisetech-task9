@@ -10,5 +10,5 @@ public interface MovieService {
 
     Optional<Movie> findById(int id);
 
-    List<Movie> findByPublished_year(Integer publishedYear);
+    List<Movie> findByPublishedYear(Integer publishedYear);
 }
