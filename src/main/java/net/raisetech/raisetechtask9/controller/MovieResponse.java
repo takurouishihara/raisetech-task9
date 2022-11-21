@@ -12,6 +12,6 @@ public class MovieResponse {
     public MovieResponse(Movie movie) {
         this.id = movie.getId();
         this.name = movie.getName();
-        this.publishedYear = movie.getPublished_year();
+        this.publishedYear = movie.getPublishedYear();
     }
 }

@@ -1,6 +1,5 @@
 package net.raisetech.raisetechtask9.controller;
 
-import net.raisetech.raisetechtask9.ResourceNotFoundException;
 import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.service.MovieService;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +14,7 @@ public class MovieController {
         this.movieService = movieService;
     }
     @GetMapping("/movies/{id}")
-    public Optional<Movie> getById(@PathVariable("id") int id) {
+    public Movie getById(@PathVariable("id") int id) {
         return movieService.findById(id);
     }
     @GetMapping("/movies")

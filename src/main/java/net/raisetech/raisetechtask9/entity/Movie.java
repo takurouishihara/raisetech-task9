@@ -7,12 +7,12 @@ public class Movie {
 
     private int id;
     private  String name;
-    private Integer published_year;
+    private Integer publishedYear;
 
-    public Movie(int id, String name, Integer published_year) {
+    public Movie(int id, String name, Integer publishedYear) {
         this.id = id;
         this.name = name;
-        this.published_year = published_year;
+        this.publishedYear = publishedYear;
     }
 
     public int getId() {
@@ -23,7 +23,7 @@ public class Movie {
         return name;
     }
 
-    public Integer getPublished_year() {
-        return published_year;
+    public Integer publishedYear() {
+        return publishedYear;
     }
 }
