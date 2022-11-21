@@ -1,15 +1,18 @@
 package net.raisetech.raisetechtask9.entity;
 
+import lombok.Getter;
+
+@Getter
 public class Movie {
 
     private int id;
     private  String name;
-    private int age;
+    private Integer publishedYear;
 
-    public Movie(int id, String name, int age) {
+    public Movie(int id, String name, Integer publishedYear) {
         this.id = id;
         this.name = name;
-        this.age = age;
+        this.publishedYear = publishedYear;
     }
 
     public int getId() {
@@ -20,7 +23,7 @@ public class Movie {
         return name;
     }
 
-    public int getAge() {
-        return age;
+    public Integer publishedYear() {
+        return publishedYear;
     }
 }

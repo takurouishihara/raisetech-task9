@@ -9,5 +9,4 @@ public class Raisetechtask9Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Raisetechtask9Application.class, args);
 	}
-
 }
