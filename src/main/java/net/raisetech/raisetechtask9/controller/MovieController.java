@@ -41,4 +41,10 @@ public class MovieController {
         movieService.deleteByMovie(id);
         return Map.of("message", "映画の削除に成功しました。");
     }
+
+    @PatchMapping("/movies/{id}")
+    public Map<String, String> updateUser(@Validated @PathVariable("id") int id, @RequestBody Movie movie) {
+        movieService.updateByMovie(movie);
+        return Map.of("message", "映画の更新に成功しました。");
+    }
 }

@@ -15,4 +15,6 @@ public interface MovieService {
     void createByMovie(CreateForm form);
 
     void deleteByMovie(int id);
+
+    void updateByMovie(Movie movie);
 }
