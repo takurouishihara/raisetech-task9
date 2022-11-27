@@ -2,6 +2,7 @@ package net.raisetech.raisetechtask9.mapper;
 
 import net.raisetech.raisetechtask9.Form.CreateForm;
 import net.raisetech.raisetechtask9.entity.Movie;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -21,4 +22,7 @@ public interface MovieMapper {
 
     @Insert("INSERT INTO movies (name, publishedYear) values (#{name}, #{publishedYear})")
     void createMovie(CreateForm form);
+
+    @Delete("DELETE FROM movies where id = #{id}")
+    void deleteMovieId(int id);
 }

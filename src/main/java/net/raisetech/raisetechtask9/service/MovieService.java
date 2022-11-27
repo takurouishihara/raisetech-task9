@@ -13,4 +13,6 @@ public interface MovieService {
     List<Movie> findByPublishedYear(Integer publishedYear);
 
     void createByMovie(CreateForm form);
+
+    void deleteByMovie(int id);
 }

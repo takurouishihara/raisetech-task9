@@ -31,9 +31,14 @@ public class MovieController {
     }
 
     @PostMapping("/movies")
-    public ResponseEntity<String> createMovie(@RequestBody @Validated CreateForm form) {
+    public Map<String, String> createMovie(@RequestBody @Validated CreateForm form) {
         movieService.createByMovie(form);
-        return ResponseEntity.ok("映画の登録に成功しました。");
+        return Map.of("message","映画の登録に成功しました。");
     }
 
+    @DeleteMapping("/movies/{id}")
+    public Map<String, String> deleteMovie(@Validated @PathVariable("id") int id) {
+        movieService.deleteByMovie(id);
+        return Map.of("message", "映画の削除に成功しました。");
+    }
 }

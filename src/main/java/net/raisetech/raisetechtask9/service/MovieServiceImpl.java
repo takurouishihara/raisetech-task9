@@ -32,4 +32,9 @@ public class MovieServiceImpl implements MovieService {
     public void createByMovie(CreateForm form)  {
         movieMapper.createMovie(form);
     }
+
+    @Override
+    public void deleteByMovie(int id) {
+        movieMapper.deleteMovieId(id);
+    }
 }
