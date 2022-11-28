@@ -1,6 +1,6 @@
 package net.raisetech.raisetechtask9.service;
 
-import net.raisetech.raisetechtask9.Form.CreateForm;
+import net.raisetech.raisetechtask9.form.CreateForm;
 import net.raisetech.raisetechtask9.entity.Movie;
 import java.util.List;
 
@@ -14,7 +14,7 @@ public interface MovieService {
 
     void createByMovie(CreateForm form);
 
-    void deleteByMovie(int id);
+    void deleteById(int id);
 
-    void updateByMovie(Movie movie);
+    void updateById(CreateForm form);
 }
