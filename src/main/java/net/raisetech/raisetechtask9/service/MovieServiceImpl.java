@@ -29,7 +29,7 @@ public class MovieServiceImpl implements MovieService {
         return movieMapper.findByPublishedYear(publishedYear);
     }
     @Override
-    public void createByMovie(CreateForm form)  {
+    public void createMovie(CreateForm form)  {
         movieMapper.createMovie(form);
     }
 

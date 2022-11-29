@@ -31,7 +31,7 @@ public class MovieController {
 
     @PostMapping("/movies")
     public Map<String, String> createMovie(@Validated @RequestBody CreateForm form) {
-        movieService.createByMovie(form);
+        movieService.createMovie(form);
         return Map.of("message","映画の登録に成功しました。");
     }
 

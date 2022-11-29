@@ -12,7 +12,7 @@ public interface MovieService {
 
     List<Movie> findByPublishedYear(Integer publishedYear);
 
-    void createByMovie(CreateForm form);
+    void createMovie(CreateForm form);
 
     void deleteById(int id);
 
