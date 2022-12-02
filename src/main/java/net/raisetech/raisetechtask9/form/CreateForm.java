@@ -10,7 +10,7 @@ public class CreateForm {
         @NotBlank
         private String name;
 
-        //@NotNull
+        @NotNull
         @Range(min = 1950, max = 2022)
         private Integer publishedYear;
 

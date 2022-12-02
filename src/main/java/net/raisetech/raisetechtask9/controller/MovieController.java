@@ -2,6 +2,7 @@ package net.raisetech.raisetechtask9.controller;
 
 import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.form.CreateForm;
+import net.raisetech.raisetechtask9.form.UpdateForm;
 import net.raisetech.raisetechtask9.service.MovieService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -30,8 +31,8 @@ public class MovieController {
     }
 
     @PostMapping("/movies")
-    public Map<String, String> createMovie(@Validated @RequestBody CreateForm form) {
-        movieService.createMovie(form);
+    public Map<String, String> createMovie(@Validated @RequestBody CreateForm createform) {
+        movieService.createMovie(createform);
         return Map.of("message","映画の登録に成功しました。");
     }
 
@@ -42,8 +43,8 @@ public class MovieController {
     }
 
     @PatchMapping("/movies/{id}")
-    public Map<String, String> updateMovie(@Validated @PathVariable("id") int id, @RequestBody CreateForm form) {
-        movieService.updateById(form);
+    public Map<String, String> updateMovie(@Validated @PathVariable("id") int id, @RequestBody UpdateForm updateform) {
+        movieService.updateById(id,updateform);
         return Map.of("message", "映画の更新に成功しました。");
     }
 }
