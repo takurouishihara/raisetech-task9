@@ -31,8 +31,8 @@ public class MovieController {
     }
 
     @PostMapping("/movies")
-    public Map<String, String> createMovie(@Validated @RequestBody CreateForm createform) {
-        movieService.createMovie(createform);
+    public Map<String, String> createMovie(@Validated @RequestBody CreateForm form) {
+        movieService.createMovie(form);
         return Map.of("message","映画の登録に成功しました。");
     }
 
@@ -43,8 +43,8 @@ public class MovieController {
     }
 
     @PatchMapping("/movies/{id}")
-    public Map<String, String> updateMovie(@Validated @PathVariable("id") int id, @RequestBody UpdateForm updateform) {
-        movieService.updateById(id,updateform);
+    public Map<String, String> updateMovie(@Validated @PathVariable("id") int id, @RequestBody UpdateForm form) {
+        movieService.updateById(id,form);
         return Map.of("message", "映画の更新に成功しました。");
     }
 }

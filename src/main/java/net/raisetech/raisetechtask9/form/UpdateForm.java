@@ -7,7 +7,6 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 public class UpdateForm {
-    private int id;
     @NotBlank
     private String name;
 
@@ -16,13 +15,8 @@ public class UpdateForm {
     @Range(min = 1950, max = 2022)
     private Integer publishedYear;
 
-    public UpdateForm(int id, String name, Integer publishedYear) {
-        this.id = id;
+    public UpdateForm( String name, Integer publishedYear) {
         this.name = name;
         this.publishedYear = publishedYear;
-    }
-
-    public Integer getPublishedYear() {
-        return publishedYear;
     }
 }
