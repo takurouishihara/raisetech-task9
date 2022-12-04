@@ -40,7 +40,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public void updateById(int id,UpdateForm form){
-        movieMapper.updateMovie(id,form);
+    public void updateById(int id, Movie movie) {
+        movieMapper.updateMovie(id,movie);
     }
 }

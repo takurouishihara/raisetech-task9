@@ -43,8 +43,8 @@ public class MovieController {
     }
 
     @PatchMapping("/movies/{id}")
-    public Map<String, String> updateMovie(@Validated @PathVariable("id") int id, @RequestBody UpdateForm form) {
-        movieService.updateById(id,form);
+    public Map<String, String> updateMovie(@Validated @PathVariable int id, @RequestBody Movie movie) {
+        movieService.updateById(id,movie);
         return Map.of("message", "映画の更新に成功しました。");
     }
 }

@@ -18,5 +18,5 @@ public interface MovieService {
 
     void deleteById(int id);
 
-    void updateById(int id, UpdateForm form);
+    void updateById(int id, Movie movie);
 }
