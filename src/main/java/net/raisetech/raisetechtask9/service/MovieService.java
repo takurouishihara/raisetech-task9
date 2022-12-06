@@ -2,7 +2,6 @@ package net.raisetech.raisetechtask9.service;
 
 import net.raisetech.raisetechtask9.form.CreateForm;
 import net.raisetech.raisetechtask9.entity.Movie;
-import net.raisetech.raisetechtask9.form.UpdateForm;
 
 import java.util.List;
 
@@ -18,5 +17,5 @@ public interface MovieService {
 
     void deleteById(int id);
 
-    void updateById(int id, Movie movie);
+    void updateByMovieId(int id, Movie movie);
 }

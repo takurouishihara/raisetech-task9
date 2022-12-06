@@ -23,6 +23,7 @@ public interface MovieMapper {
     @Delete("DELETE FROM movies where id = #{id}")
     void deleteMovieId(int id);
 
-    @Update("UPDATE movies SET name = #{name}, published_year = #{publishedYear} WHERE id = #{id}")
-    void updateMovie(int id, Movie movie);
+   // @Update("UPDATE movies SET name = #{name}, published_year = #{publishedYear} WHERE id = #{id}")
+    @Update("UPDATE movies SET name = #{name} WHERE id = #{id}")
+    void updateMovie(Movie movie);
 }

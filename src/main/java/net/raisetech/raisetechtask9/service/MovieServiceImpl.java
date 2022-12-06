@@ -3,7 +3,6 @@ package net.raisetech.raisetechtask9.service;
 import net.raisetech.raisetechtask9.form.CreateForm;
 import net.raisetech.raisetechtask9.ResourceNotFoundException;
 import net.raisetech.raisetechtask9.entity.Movie;
-import net.raisetech.raisetechtask9.form.UpdateForm;
 import net.raisetech.raisetechtask9.mapper.MovieMapper;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -40,7 +39,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public void updateById(int id, Movie movie) {
-        movieMapper.updateMovie(id,movie);
+    public void updateByMovieId(int id, Movie movie) {
+        movieMapper.updateMovie(movie);
     }
 }

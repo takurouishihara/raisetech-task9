@@ -2,7 +2,6 @@ package net.raisetech.raisetechtask9.controller;
 
 import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.form.CreateForm;
-import net.raisetech.raisetechtask9.form.UpdateForm;
 import net.raisetech.raisetechtask9.service.MovieService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -43,8 +42,9 @@ public class MovieController {
     }
 
     @PatchMapping("/movies/{id}")
-    public Map<String, String> updateMovie(@Validated @PathVariable int id, @RequestBody Movie movie) {
-        movieService.updateById(id,movie);
+    //public Map<String, String> updateMovie(@RequestBody Movie movie) {
+    public Map<String, String> updateMovie(@PathVariable int id, @RequestBody @Validated  Movie movie) {
+        movieService.updateByMovieId(id,movie);
         return Map.of("message", "映画の更新に成功しました。");
     }
 }
