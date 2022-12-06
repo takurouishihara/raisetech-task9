@@ -17,5 +17,5 @@ public interface MovieService {
 
     void deleteById(int id);
 
-    void updateByMovieId(int id, Movie movie);
+    void updateById(int id, Movie movie);
 }

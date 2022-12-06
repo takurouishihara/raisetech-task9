@@ -44,7 +44,7 @@ public class MovieController {
     @PatchMapping("/movies/{id}")
     //public Map<String, String> updateMovie(@RequestBody Movie movie) {
     public Map<String, String> updateMovie(@PathVariable int id, @RequestBody @Validated  Movie movie) {
-        movieService.updateByMovieId(id,movie);
+        movieService.updateById(id,movie);
         return Map.of("message", "映画の更新に成功しました。");
     }
 }

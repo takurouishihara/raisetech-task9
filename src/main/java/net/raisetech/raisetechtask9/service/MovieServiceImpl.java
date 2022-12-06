@@ -39,7 +39,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public void updateByMovieId(int id, Movie movie) {
+    public void updateById(int id, Movie movie) {
         movieMapper.updateMovie(movie);
     }
 }
