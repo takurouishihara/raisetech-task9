@@ -36,7 +36,7 @@ public class MovieController {
     }
 
     @DeleteMapping("/movies/{id}")
-    public Map<String, String> deleteMovie(@Validated @PathVariable("id") int id) {
+    public Map<String, String> deleteMovie(@Validated @PathVariable("id") int id) throws Exception{
         movieService.deleteById(id);
         return Map.of("message", "映画の削除に成功しました。");
     }
@@ -44,7 +44,7 @@ public class MovieController {
     @PatchMapping("/movies/{id}")
     //public Map<String, String> updateMovie(@RequestBody Movie movie) {
     public Map<String, String> updateMovie(@PathVariable int id, @RequestBody @Validated  Movie movie) {
-        movieService.updateById(id,movie);
+        movieService.updateById(id, movie);
         return Map.of("message", "映画の更新に成功しました。");
     }
 }

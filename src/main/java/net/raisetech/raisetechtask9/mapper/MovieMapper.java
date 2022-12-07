@@ -24,6 +24,5 @@ public interface MovieMapper {
     void deleteMovieId(int id);
 
     @Update("UPDATE movies SET name = #{name}, published_year = #{publishedYear} WHERE id = #{id}")
-    //@Update("UPDATE movies SET name = #{name} WHERE id = #{id}")
     void updateMovie(Movie movie);
 }
