@@ -23,7 +23,7 @@ public class Movie {
         return name;
     }
 
-    public Integer publishedYear() {
+    public Integer getPublishedYear() {
         return publishedYear;
     }
 }

@@ -1,5 +1,6 @@
 package net.raisetech.raisetechtask9.service;
 
+import net.raisetech.raisetechtask9.form.CreateForm;
 import net.raisetech.raisetechtask9.ResourceNotFoundException;
 import net.raisetech.raisetechtask9.entity.Movie;
 import net.raisetech.raisetechtask9.mapper.MovieMapper;
@@ -27,5 +28,18 @@ public class MovieServiceImpl implements MovieService {
     public List<Movie> findByPublishedYear(Integer publishedYear) {
         return movieMapper.findByPublishedYear(publishedYear);
     }
-}
+    @Override
+    public void createMovie(CreateForm form)  {
+        movieMapper.createMovie(form);
+    }
 
+    @Override
+    public void deleteById(int id) {
+        movieMapper.deleteMovieId(id);
+    }
+
+    @Override
+    public void updateById(int id, Movie movie) {
+        movieMapper.updateMovie(movie);
+    }
+}
